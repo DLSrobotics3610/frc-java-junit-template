@@ -55,7 +55,7 @@ first letter capitalized, e.g. "Add abz" or "Fix bla" instead of
 writing there in whatever tense you find easiest.
 
 Each time you push your code, your code gets compiled and tested by
-[Travis](https://travis-ci.org/246overclocked/Overclocked-Swerve). Although you
+[Travis](https://travis-ci.org/246overclocked/frc-java-junit-template). Although you
 should be [testing on your local machine as you develop](#make-sure-your-code-is-ready),
 this is another good way to make sure you don't break anything.
 
@@ -72,7 +72,7 @@ main directory of the project. If you see `BUILD SUCCESSFUL` then you
 are ready to make a pull request. If you see `BUILD FAILED` you should
 investigate the issue and fix your code before filing the pull
 request. You can also check
-[Travis](https://travis-ci.com/246overclocked/OverclockedSwerve) to see if
+[Travis](https://travis-ci.org/246overclocked/frc-java-junit-template) to see if
 your branch is passing.
 
 ### Filing the Pull Request
