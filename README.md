@@ -2,7 +2,28 @@
 [![Build Status](https://travis-ci.org/246overclocked/OverclockedSwerve.svg?branch=master)](https://travis-ci.org/246overclocked/OverclockedSwerve)
 [![Stories in Ready](https://badge.waffle.io/246overclocked/OverclockedSwerve.svg?label=ready&title=Ready)](http://waffle.io/246overclocked/OverclockedSwerve)
 
-A clean version of our swerve drive code designed to be easily integrated into a new project.
+A template Java project for FRC using JUnit and Ant for building and unit testing.
+
+## Who should use this repository
+Whether you're an FRC team that wants to make a new project or build on an existing one, this the purpose of this repo is to provide an example as a template to integrate JUnit and Travis Continuous Integration into a Java FRC project. [TravisCI](https://travis-ci.org/) is a website that integrates with GitHub that will automatically build and test your code every time you push to GitHub.
+
+## To use JUnit in your project
+  1. Clone the repo: `$ git clone https://github.com/246overclocked/frc-java-junit-template.git`
+  2. Make a new FRC Java project in Eclipse, or find your existing FRC project
+  3. Replace the your `build.xml` with the `build.xml` in this repository
+  4. Copy the `lib/` folder in this repository into the corresponding location in your FRC Java project
+  5. Open `lib/wpilib/wpilib.properties` and change 246 in the line `team-number=246` to your team's number
+  6. Create a `test` folder next to `src`, and create packages there with the same name as packages in `src`. Add test files that end in `Test.java` in the appropriate packages in the `test` folder. Eclipse can help you set up JUnit tests automatically. See [this guide](https://courses.cs.washington.edu/courses/cse143/11wi/eclipse-tutorial/junit.shtml) for more information.
+
+Hooray! Now you have set up JUnit in your FRC Java project. Next follow the steps in [installation](#installation) to get Apache Ant on your computer. Afterwards, continue to [usage](#usage) to see how to use Ant to deploy to the robot, and run all JUnit tests.
+
+### Enable Travis for automatic building & testing (optional)
+  1. Copy the `.travis.yml` into the corresponding location in your FRC Java project
+  2. Go to https://travis-ci.org/ and sign in with your GitHub username.
+  3. Click the + sign and the GitHub repository with your FRC Java project
+  4. Make a push to GitHub
+
+Then voila, Travis will automatically build and test your project.
 
 ## Installation
 All FRC projects use **Apache Ant** to build and deploy code for the robot. In addition, this project also uses Ant to run unit tests. All libraries and dependencies are included in the project, so no external downloads are necessary. The only requirement is to have Ant installed on your computer.
