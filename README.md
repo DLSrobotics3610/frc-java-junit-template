@@ -1,6 +1,5 @@
 # FRC Java JUnit Template
-[![Build Status](https://travis-ci.org/246overclocked/OverclockedSwerve.svg?branch=master)](https://travis-ci.org/246overclocked/OverclockedSwerve)
-[![Stories in Ready](https://badge.waffle.io/246overclocked/OverclockedSwerve.svg?label=ready&title=Ready)](http://waffle.io/246overclocked/OverclockedSwerve)
+[![Build Status](https://travis-ci.org/246overclocked/frc-java-junit-template.svg?branch=master)](https://travis-ci.org/246overclocked/frc-java-junit-template)
 
 A template Java project for FRC using JUnit and Ant for building and unit testing.
 
