@@ -67,7 +67,9 @@ Each "target" is a subcommand you can run. For example `ant deploy` deploys the 
 
 ### Running Ant from Eclipse
 
-  1. First make sure you have no Ant Build configurations already set (you can check by going to Run > External Tools > External Tools Configurations... and looking on the left of the window that pops up) and deleting any ones that have already been set. 
+  1. Copy over `frc-java-junit-template_build.xml.launch` and `frc-java-junit-template_test.xml.launch` into your project's root folder. Rename the prefix of these files from `frc-java-junit-template` to the name of your project and open each file and replace every occurence of `frc-java-junit-template` with the name of your project.
+
+  1. Then, make sure you have no Ant Build configurations already set (you can check by going to Run > External Tools > External Tools Configurations... and looking on the left of the window that pops up) and deleting any ones that have already been set. 
 
   1. Go to File > Import... > select Launch Configurations under Run/Debug > check off the 'frc-java-junit-template' directory on the left (you should see two configuration files checked off on the right) > Finish. 
   **Note:** you may notice that running `git status` after this step reveals that the two configuration files you just imported were deleted - this is completely normal, but be sure to run `git stash` in order to restore these files. 
