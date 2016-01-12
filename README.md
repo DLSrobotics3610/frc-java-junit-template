@@ -41,9 +41,9 @@ On OS X, the easiest way is to [install Homebrew](http://brew.sh), open up a ter
 
 [Download Ant](http://ant.apache.org/bindownload.cgi) and follow the installation instructions, then set up Ant for the command line on Windows (cmd or powershell): 
 
-  1. Add new environment variable `ANT_HOME` and point it to the place where Ant is installed (as Eclipse Plugin or standalone). You can do this temporarily (or for a single session) by using the command `set [variable]=[path]` in cmd or `$env:Variable = 'path'` in powershell, or you can do this permanently by right-clicking on 'My Computer' (or 'This PC') and going to Properties > Advanced system settings (on the left) > Environment Variables. In the window that pops up, you can add the variable `ANT_HOME` equivalent to the Ant installation folder in System variables. 
+  1. Add new environment variable `ANT_HOME` and point it to the place where Ant is installed (as Eclipse Plugin or standalone). You can do this temporarily (or for a single session) by using the command `set [variable]=[path]` in cmd or `$env:Variable = 'path'` in powershell, or you can do this permanently by right-clicking on 'My Computer' (or 'This PC') and going to Properties > Advanced system settings (on the left) > Environment Variables. In the window that pops up, you can add the variable `ANT_HOME` with the path to the Ant installation folder in System variables. 
 
-  1. Append `%ANT_HOME%\bin` to the `Path` envoronment variable under System variables (see the step above) by selecting it in the list of System variables and clicking Edit... - if it is blank, or if you could not find this variable and create it you can simply add `%ANT_HOME%\bin` as the value. If you found it containing a value already, however, **do not delete its contents**, but add `;%ANT_HOME%\bin` to its contents (with a **semi-colon** and **no spaces**). 
+  2. Append `%ANT_HOME%\bin` to the `Path` envoronment variable under System variables (see the step above) by selecting it in the list of System variables and clicking Edit... - if it is blank, or if you could not find this variable and create it you can simply add `%ANT_HOME%\bin` as the value. If you found it containing a value already, however, **do not delete its contents**, but add `;%ANT_HOME%\bin` to its contents (with a **semi-colon** and **no spaces**). 
 
 ## Usage
 
