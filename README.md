@@ -16,6 +16,8 @@ Whether you're an FRC team that wants to make a new project or build on an exist
 
 All unit tests will live in the `test` folder in packages that correspond to the code in `src` under test. For Ant to run the tests, the names of the files containing tests must end in `Test.java`. For more details on how to structure the code in the `test` folder, see ["Writing JUnit tests" in CONTRIBUTING](https://github.com/246overclocked/frc-java-junit-template/blob/cleanup-instructions/CONTRIBUTING.md#writing-junit-tests). Note that if there are no tests written in the `test` folder, Ant will have no tests to run.
 
+(Optional): GitHub users, copy over the `.gitignore` in this repository. This will ensure you will only commit Java source code and other essential files (but not compiled binaries).
+
 Hooray! Now you have set up JUnit in your FRC Java project. Next follow the steps in [installation](#installation) to get Apache Ant on your computer. Afterwards, continue to [usage](#usage) to see how to use Ant to deploy to the robot, and run all JUnit tests.
 
 ### Enable Travis for automatic building & testing (optional)
@@ -39,7 +41,7 @@ On OS X, the easiest way is to [install Homebrew](http://brew.sh), open up a ter
 
 [Download Ant](http://ant.apache.org/bindownload.cgi) and follow the installation instructions, then set up Ant for the command line on Windows (cmd or powershell): 
 
-  1. Add new environment variable `ANT_HOME` and point it to the place where Ant is installed (as Eclipse Plugin or standalone). You can do this temporarily (or for a single session) by using the command `set [variable]=[path]` in cmd or `$env:Variable = 'path'` in powershell, or you can do this permanently by right-clicking on 'My Computer' (or 'This PC') and going to Properties > Advanced system settings (on the left) > Environment Variables. In the window that pops up, you can add the variable `ANT_HOME` equivalent to the Ant installation folder un System variables. 
+  1. Add new environment variable `ANT_HOME` and point it to the place where Ant is installed (as Eclipse Plugin or standalone). You can do this temporarily (or for a single session) by using the command `set [variable]=[path]` in cmd or `$env:Variable = 'path'` in powershell, or you can do this permanently by right-clicking on 'My Computer' (or 'This PC') and going to Properties > Advanced system settings (on the left) > Environment Variables. In the window that pops up, you can add the variable `ANT_HOME` equivalent to the Ant installation folder in System variables. 
 
   1. Append `%ANT_HOME%\bin` to the `Path` envoronment variable under System variables (see the step above) by selecting it in the list of System variables and clicking Edit... - if it is blank, or if you could not find this variable and create it you can simply add `%ANT_HOME%\bin` as the value. If you found it containing a value already, however, **do not delete its contents**, but add `;%ANT_HOME%\bin` to its contents (with a **semi-colon** and **no spaces**). 
 
