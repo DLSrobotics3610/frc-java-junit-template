@@ -8,18 +8,20 @@ Whether you're an FRC team that wants to make a new project or build on an exist
 
 ## To use JUnit in your project
   1. Clone the repo: `$ git clone https://github.com/246overclocked/frc-java-junit-template.git`
-  2. Make a new FRC Java project in Eclipse, or find your existing FRC project
+  2. [Make a new FRC Java project in Eclipse](https://wpilib.screenstepslive.com/s/4485/m/13809/l/145307-creating-your-benchtop-test-program), or find your existing FRC project
   3. Replace the your `build.xml` with the `build.xml` in this repository
   4. Copy the `lib/` folder in this repository into the root folder of your FRC Java project (for example, in this template project, the root folder is `frc-java-junit-template`)
   5. Open `lib/wpilib/wpilib.properties` and change 246 in the line `team-number=246` to your team's number
-  6. Create a `test` folder next to `src`, and create packages there with the same name as packages in `src`. Add test files that end in `Test.java` in the appropriate packages in the `test` folder. Eclipse can help you set up JUnit tests automatically. See [this guide](https://courses.cs.washington.edu/courses/cse143/11wi/eclipse-tutorial/junit.shtml) for more information.
+  6. Create a `test` folder next to `src` in the project's root folder.
+
+All unit tests will live in the `test` folder in packages that correspond to the code in `src` under test. For Ant to run the tests, the names of the files containing tests must end in `Test.java`. For more details on how to structure the code in the `test` folder, see ["Writing JUnit tests" in CONTRIBUTING](https://github.com/246overclocked/frc-java-junit-template/blob/cleanup-instructions/CONTRIBUTING.md#writing-junit-tests). Note that if there are no tests written in the `test` folder, Ant will have no tests to run.
 
 Hooray! Now you have set up JUnit in your FRC Java project. Next follow the steps in [installation](#installation) to get Apache Ant on your computer. Afterwards, continue to [usage](#usage) to see how to use Ant to deploy to the robot, and run all JUnit tests.
 
 ### Enable Travis for automatic building & testing (optional)
   1. Copy the `.travis.yml` into the corresponding location in your FRC Java project
   2. Go to https://travis-ci.org/ and sign in with your GitHub username.
-  3. Click the + sign and the GitHub repository with your FRC Java project
+  3. Click the + sign and flip the switch on to ON for the GitHub repository with your FRC Java project
   4. Make a push to GitHub
 
 Then voila, Travis will automatically build and test your project.
