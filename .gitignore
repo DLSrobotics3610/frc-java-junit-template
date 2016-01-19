@@ -55,3 +55,6 @@ hs_err_pid*
 
 # Except everything in OverclockedSwerve/lib
 !lib/**/*
+
+# WPILib
+sysProps.xml
