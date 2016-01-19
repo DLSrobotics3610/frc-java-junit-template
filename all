@@ -1,0 +1,19 @@
+Replace the entire \lib\wpilib\java\current with the one from a windows computer
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Tue Jan 19 15:43:19 2016 -0500
+#
+# On branch windows-deploy
+# Your branch is ahead of 'origin/windows-deploy' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   lib/wpilib/java/current/ant/build.properties
+#
+# Untracked files:
+#	lib/wpilib/java/current/ant/old_build.properties
+#	lib/wpilib/java/current/lib/NetworkTables-sources.jar
+#	lib/wpilib/java/current/lib/WPILib-sources.jar
+#
