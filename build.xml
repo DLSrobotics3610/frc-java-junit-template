@@ -20,13 +20,18 @@
   <!-- <property name="target" value=""/> -->
 
   <!-- Any other property in build.properties can also be overridden. -->
-  
-  <property file="lib/wpilib/wpilib.properties"/>
+
+  <property environment="env"/>
+  <condition property="wpilib.root" value="lib" else="${user.home}">
+    <isset property="env.TRAVIS" />
+  </condition>
+
+  <property file="${wpilib.root}/wpilib/wpilib.properties"/>
   <property file="build.properties"/>
-  <property file="lib/wpilib/java/${version}/ant/build.properties"/>
-  
+  <property file="${wpilib.root}/wpilib/java/${version}/ant/build.properties"/>
+
   <import file="${wpilib.ant.dir}/build.xml"/>
-  
+
   <property name="test.dir" value="test" />
 
   <path id="classpath.test">
@@ -50,4 +55,4 @@
     </junit>
   </target>
 
-</project> 
+</project>
