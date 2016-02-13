@@ -185,27 +185,15 @@
   </target>
 
   <target name="debug-simulate" depends="jar-for-simulation">
-    <parallel>
-      <sequential>
-	    <echo>[debug-simulate] Running Gazebo.</echo>
-	    <exec executable="frcsim">
-	      <arg value="${simulation.world.file}"/>
-	    </exec>
-      </sequential>
-      <sequential>
-        <sleep seconds="5"/>
-	    <echo>[debug-simulate] you may now run your DriverStation.</echo>
-      </sequential>
-      <sequential>
-        <sleep seconds="5"/>
-	    <echo>[debug-simulate] Running Code.</echo>
+    <sequential>
+      <echo>[simulate] You may now run Gazebo and your DriverStation</echo>
+	    <echo>[simulate] Running Code In Debug Mode.</echo>
 	    <java jar="${simulation.dist.jar}" fork="true">
           <jvmarg value="-Xdebug" />
           <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8348" />
           <jvmarg value="-Djava.library.path=${wpilib.sim.lib}" />
         </java>
-      </sequential>
-    </parallel>
+    </sequential>
   </target>
 
   <target name="dependencies" depends="get-target-ip">
@@ -217,9 +205,13 @@
 	</post>
 	<loadfile srcFile="sysProps.xml" encoding="UTF-16LE" property="roboRIOSysValues"/>
 	<propertyregex property="roboRIOImage" input="${roboRIOSysValues}" regexp="FRC_roboRIO_2016_v([0-9]+)" select="\1" defaultValue="ImageRegExFail"/>
-	<assert message="roboRIO Image does not match plugin, allowed image version: ${roboRIOAllowedImages}">
+	<propertyregex property="roboRIOImageYear" input="${roboRIOSysValues}" regexp="FRC_roboRIO_([0-9]+)_v" select="\1" defaultValue="ImageRegExFail"/>
+	<assert message="Image of roboRIO does not match plugin. ${line.separator}Allowed image year: ${roboRIOAllowedYear} version: ${roboRIOAllowedImages}. ${line.separator}Actual image year: ${roboRIOImageYear} version ${roboRIOImage}. ${line.separator}RoboRIO needs to be re-imaged or plugins updated.">
 		<bool>
-			<contains string="${roboRIOAllowedImages}" substring="${roboRIOImage}"/>
+			<and>
+				<contains string="${roboRIOAllowedImages}" substring="${roboRIOImage}"/>
+				<contains string="${roboRIOAllowedYear}" substring="${roboRIOImageYear}"/>
+			</and>
 		</bool>
 	</assert>
 	<echo>roboRIO image version validated</echo>
