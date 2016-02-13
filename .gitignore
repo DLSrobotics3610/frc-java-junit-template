@@ -20,8 +20,8 @@ local.properties
 
 # Locally stored "Eclipse launch configurations" except our custom ones
 *.launch
-!OverclockedSwerve_build.xml.launch
-!OverclockedSwerve_test.xml.launch
+!frc-java-junit-template_build.xml.launch
+!frc-java-junit-template_test.xml.launch
 
 # CDT-specific
 .cproject
@@ -53,7 +53,7 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# Except everything in OverclockedSwerve/lib
+# Except everything in the lib folder, which contains essential binaries for compilation
 !lib/**/*
 
 # WPILib
