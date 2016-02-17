@@ -14,7 +14,7 @@ Whether you're an FRC team that wants to make a new project or build on an exist
   5. Open `lib/wpilib/wpilib.properties` and change 246 in the line `team-number=246` to your team's number
   6. Create a `test` folder next to `src` in the project's root folder.
 
-All unit tests will live in the `test` folder in packages that correspond to the code in `src` under test. For Ant to run the tests, the names of the files containing tests must end in `Test.java`. For more details on how to structure the code in the `test` folder, see ["Writing JUnit tests" in CONTRIBUTING](https://github.com/246overclocked/frc-java-junit-template/blob/cleanup-instructions/CONTRIBUTING.md#writing-junit-tests). Note that if there are no tests written in the `test` folder, Ant will have no tests to run.
+All unit tests will live in the `test` folder in packages that correspond to the code in `src` under test. For Ant to run the tests, the names of the files containing tests must end in `Test.java`. For more details on how to structure the code in the `test` folder, see ["Writing JUnit tests" in CONTRIBUTING](CONTRIBUTING.md#writing-junit-tests). Note that if there are no tests written in the `test` folder, Ant will have no tests to run.
 
 (Optional): GitHub users, copy over the `.gitignore` in this repository. This will ensure you will only commit Java source code and other essential files (but not compiled binaries).
 
