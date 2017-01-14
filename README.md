@@ -22,7 +22,7 @@ Hooray! Now you have set up JUnit in your FRC Java project. Next follow the step
 
 ### Enable Travis for automatic building & testing (optional)
   1. Copy the `.travis.yml` into the corresponding location in your FRC Java project
-  2. Go to https://travis-ci.org/ and sign in with your GitHub username.
+  2. Go to https://travis-ci.org/ and sign in with your GitHub username
   3. Click the + sign and flip the switch on to ON for the GitHub repository with your FRC Java project
   4. Make a push to GitHub
 
